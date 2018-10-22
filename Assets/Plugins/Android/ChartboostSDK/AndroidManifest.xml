@@ -16,10 +16,6 @@
     <!-- Allows the SDK to cache all ad assets (creatives, custom frames, etc.)
      in external memory. This maximizes performance by immediately delivering
      ads and reducing network traffic used by the SDK. -->
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" android:maxSdkVersion="18" />
-
-    <!-- Allows the SDK to handle video playback when interrupted by a call -->
-    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
 
     <application>
         <activity android:name="com.chartboost.sdk.CBImpressionActivity"
