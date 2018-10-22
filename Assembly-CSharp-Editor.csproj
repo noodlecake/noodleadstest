@@ -58,8 +58,6 @@
      <Compile Include="Assets\AudienceNetwork\Editor\AudienceNetworkSettingsEditor.cs" />
      <Compile Include="Assets\AudienceNetwork\Editor\Utility.cs" />
      <Compile Include="Assets\Editor\Heyzap\HeyzapPostBuild.cs" />
-     <Compile Include="Assets\Editor\Vungle\VunglePostBuilder.cs" />
-     <Compile Include="Assets\Editor\VungleBuildHelper.cs" />
      <Compile Include="Assets\IronSource\Editor\IAdapterSettings.cs" />
      <Compile Include="Assets\IronSource\Editor\IronSourceBuildPostprocessor.cs" />
      <None Include="Assets\AudienceNetwork\Editor\Android\DefaultAndroidManifest.xml" />
