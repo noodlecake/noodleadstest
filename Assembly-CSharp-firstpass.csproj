@@ -51,8 +51,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Plugins\AppLovin\AppLovin.cs" />
-     <Compile Include="Assets\Plugins\AppLovin\AppLovinEvents.cs" />
      <Compile Include="Assets\Plugins\Heyzap\HeyzapAds.cs" />
      <Compile Include="Assets\Plugins\Heyzap\HZBannerAd.cs" />
      <Compile Include="Assets\Plugins\Heyzap\HZDemographics.cs" />
@@ -61,15 +59,7 @@
      <Compile Include="Assets\Plugins\Heyzap\HZOfferWallAd.cs" />
      <Compile Include="Assets\Plugins\Heyzap\HZShowOptions.cs" />
      <Compile Include="Assets\Plugins\Heyzap\HZVideoAd.cs" />
-     <None Include="Assets\Plugins\iOS\MOAT_LICENSE.txt" />
-     <None Include="Assets\Plugins\Android\ChartboostSDK\AndroidManifest.xml" />
-     <None Include="Assets\Plugins\iOS\MOAT_VERSION.txt" />
-     <None Include="Assets\Plugins\iOS\VERSION_MOAT.txt" />
-     <None Include="Assets\Plugins\Android\IronSource\AndroidManifest.xml" />
-     <None Include="Assets\Plugins\iOS\LICENSE_MOAT.txt" />
      <None Include="Assets\Plugins\Android\AndroidManifest.xml" />
-     <None Include="Assets\Plugins\Android\GoogleMobileAdsPlugin\AndroidManifest.xml" />
-     <None Include="Assets\Plugins\AppLovin\AppLovin Readme.txt" />
      <None Include="Assets\Plugins\Android\Heyzap\AndroidManifest.xml" />
  <Reference Include="UnityEngine.CoreModule">
  <HintPath>/Applications/Unity2017.4.13f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.CoreModule.dll</HintPath>
@@ -235,9 +225,6 @@
  </Reference>
  <Reference Include="UnityEngine.SpatialTracking">
  <HintPath>/Applications/Unity2017.4.13f1/Unity.app/Contents/UnityExtensions/Unity/UnitySpatialTracking/RuntimeEditor/UnityEngine.SpatialTracking.dll</HintPath>
- </Reference>
- <Reference Include="UnityEngine.Advertisements.Editor">
- <HintPath>/Volumes/Noodlevault/noodleadstest/Assets/UnityAds/UnityEngine.Advertisements.Editor.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.Analytics">
  <HintPath>/Users/ben/Library/Unity/cache/packages/packages.unity.com/com.unity.analytics@2.0.13/UnityEngine.Analytics.dll</HintPath>

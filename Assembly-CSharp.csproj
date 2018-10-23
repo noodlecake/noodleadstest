@@ -51,70 +51,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\AudienceNetwork\Library\AdChoices.cs" />
-     <Compile Include="Assets\AudienceNetwork\Library\AdHandler.cs" />
-     <Compile Include="Assets\AudienceNetwork\Library\AdSettings.cs" />
-     <Compile Include="Assets\AudienceNetwork\Library\AdUtility.cs" />
-     <Compile Include="Assets\AudienceNetwork\Library\AdView.cs" />
-     <Compile Include="Assets\AudienceNetwork\Library\InterstitialAd.cs" />
-     <Compile Include="Assets\AudienceNetwork\Library\NativeAd.cs" />
-     <Compile Include="Assets\AudienceNetwork\Library\NativeAdBase.cs" />
-     <Compile Include="Assets\AudienceNetwork\Library\NativeBannerAd.cs" />
-     <Compile Include="Assets\AudienceNetwork\Library\RewardedVideoAd.cs" />
-     <Compile Include="Assets\AudienceNetwork\Library\SdkVersion.cs" />
-     <Compile Include="Assets\GoogleMobileAds\Api\AdFailedToLoadEventArgs.cs" />
-     <Compile Include="Assets\GoogleMobileAds\Api\AdLoader.cs" />
-     <Compile Include="Assets\GoogleMobileAds\Api\AdPosition.cs" />
-     <Compile Include="Assets\GoogleMobileAds\Api\AdRequest.cs" />
-     <Compile Include="Assets\GoogleMobileAds\Api\AdSize.cs" />
-     <Compile Include="Assets\GoogleMobileAds\Api\BannerView.cs" />
-     <Compile Include="Assets\GoogleMobileAds\Api\CustomNativeEventArgs.cs" />
-     <Compile Include="Assets\GoogleMobileAds\Api\CustomNativeTemplateAd.cs" />
-     <Compile Include="Assets\GoogleMobileAds\Api\Gender.cs" />
-     <Compile Include="Assets\GoogleMobileAds\Api\InterstitialAd.cs" />
-     <Compile Include="Assets\GoogleMobileAds\Api\Mediation\MediationExtras.cs" />
-     <Compile Include="Assets\GoogleMobileAds\Api\MobileAds.cs" />
-     <Compile Include="Assets\GoogleMobileAds\Api\Reward.cs" />
-     <Compile Include="Assets\GoogleMobileAds\Api\RewardBasedVideoAd.cs" />
-     <Compile Include="Assets\GoogleMobileAds\Common\DummyClient.cs" />
-     <Compile Include="Assets\GoogleMobileAds\Common\IAdLoaderClient.cs" />
-     <Compile Include="Assets\GoogleMobileAds\Common\IBannerClient.cs" />
-     <Compile Include="Assets\GoogleMobileAds\Common\ICustomNativeTemplateClient.cs" />
-     <Compile Include="Assets\GoogleMobileAds\Common\IInterstitialClient.cs" />
-     <Compile Include="Assets\GoogleMobileAds\Common\IMobileAdsClient.cs" />
-     <Compile Include="Assets\GoogleMobileAds\Common\IRewardBasedVideoAdClient.cs" />
-     <Compile Include="Assets\GoogleMobileAds\Common\MobileAdsEventExecutor.cs" />
-     <Compile Include="Assets\GoogleMobileAds\Common\Utils.cs" />
-     <Compile Include="Assets\GoogleMobileAds\Platforms\Android\AdLoaderClient.cs" />
-     <Compile Include="Assets\GoogleMobileAds\Platforms\Android\BannerClient.cs" />
-     <Compile Include="Assets\GoogleMobileAds\Platforms\Android\CustomNativeTemplateClient.cs" />
-     <Compile Include="Assets\GoogleMobileAds\Platforms\Android\InterstitialClient.cs" />
-     <Compile Include="Assets\GoogleMobileAds\Platforms\Android\MobileAdsClient.cs" />
-     <Compile Include="Assets\GoogleMobileAds\Platforms\Android\RewardBasedVideoAdClient.cs" />
-     <Compile Include="Assets\GoogleMobileAds\Platforms\Android\Utils.cs" />
-     <Compile Include="Assets\GoogleMobileAds\Platforms\GoogleMobileAdsClientFactory.cs" />
-     <Compile Include="Assets\GoogleMobileAds\Platforms\iOS\AdLoaderClient.cs" />
-     <Compile Include="Assets\GoogleMobileAds\Platforms\iOS\BannerClient.cs" />
-     <Compile Include="Assets\GoogleMobileAds\Platforms\iOS\CustomNativeTemplateClient.cs" />
-     <Compile Include="Assets\GoogleMobileAds\Platforms\iOS\Externs.cs" />
-     <Compile Include="Assets\GoogleMobileAds\Platforms\iOS\InterstitialClient.cs" />
-     <Compile Include="Assets\GoogleMobileAds\Platforms\iOS\MobileAdsClient.cs" />
-     <Compile Include="Assets\GoogleMobileAds\Platforms\iOS\MonoPInvokeCallbackAttribute.cs" />
-     <Compile Include="Assets\GoogleMobileAds\Platforms\iOS\RewardBasedVideoAdClient.cs" />
-     <Compile Include="Assets\GoogleMobileAds\Platforms\iOS\Utils.cs" />
-     <Compile Include="Assets\IronSource\Scripts\AndroidAgent.cs" />
-     <Compile Include="Assets\IronSource\Scripts\iOSAgent.cs" />
-     <Compile Include="Assets\IronSource\Scripts\IronSource.cs" />
-     <Compile Include="Assets\IronSource\Scripts\IronSourceConfig.cs" />
-     <Compile Include="Assets\IronSource\Scripts\IronSourceError.cs" />
-     <Compile Include="Assets\IronSource\Scripts\IronSourceEvents.cs" />
-     <Compile Include="Assets\IronSource\Scripts\IronSourceIAgent.cs" />
-     <Compile Include="Assets\IronSource\Scripts\IronSourceJSON.cs" />
-     <Compile Include="Assets\IronSource\Scripts\IronSourcePlacement.cs" />
-     <Compile Include="Assets\IronSource\Scripts\IronSourceSegment.cs" />
-     <Compile Include="Assets\IronSource\Scripts\UnsupportedPlatformAgent.cs" />
      <Compile Include="Assets\Scripts\AdsManager.cs" />
-     <None Include="Assets\AudienceNetwork\Plugins\Android\AndroidManifest.xml" />
  <Reference Include="UnityEngine.CoreModule">
  <HintPath>/Applications/Unity2017.4.13f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.CoreModule.dll</HintPath>
  </Reference>
@@ -279,9 +216,6 @@
  </Reference>
  <Reference Include="UnityEngine.SpatialTracking">
  <HintPath>/Applications/Unity2017.4.13f1/Unity.app/Contents/UnityExtensions/Unity/UnitySpatialTracking/RuntimeEditor/UnityEngine.SpatialTracking.dll</HintPath>
- </Reference>
- <Reference Include="UnityEngine.Advertisements.Editor">
- <HintPath>/Volumes/Noodlevault/noodleadstest/Assets/UnityAds/UnityEngine.Advertisements.Editor.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.Analytics">
  <HintPath>/Users/ben/Library/Unity/cache/packages/packages.unity.com/com.unity.analytics@2.0.13/UnityEngine.Analytics.dll</HintPath>

@@ -51,17 +51,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\AudienceNetwork\Editor\Android\ManifestMod.cs" />
-     <Compile Include="Assets\AudienceNetwork\Editor\AudienceNetworkBuild.cs" />
-     <Compile Include="Assets\AudienceNetwork\Editor\AudienceNetworkConsoleEndpoint.cs" />
-     <Compile Include="Assets\AudienceNetwork\Editor\AudienceNetworkPostprocess.cs" />
-     <Compile Include="Assets\AudienceNetwork\Editor\AudienceNetworkSettingsEditor.cs" />
-     <Compile Include="Assets\AudienceNetwork\Editor\Utility.cs" />
      <Compile Include="Assets\Editor\Heyzap\HeyzapPostBuild.cs" />
-     <Compile Include="Assets\IronSource\Editor\IAdapterSettings.cs" />
-     <Compile Include="Assets\IronSource\Editor\IronSourceBuildPostprocessor.cs" />
-     <None Include="Assets\AudienceNetwork\Editor\Android\DefaultAndroidManifest.xml" />
-     <None Include="Assets\GoogleMobileAds\Editor\GoogleMobileAdsDependencies.xml" />
  <Reference Include="UnityEngine.CoreModule">
  <HintPath>/Applications/Unity2017.4.13f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.CoreModule.dll</HintPath>
  </Reference>
@@ -277,9 +267,6 @@
  </Reference>
  <Reference Include="UnityEditor.OSXStandalone.Extensions">
  <HintPath>/Applications/Unity2017.4.13f1/Unity.app/Contents/PlaybackEngines/MacStandaloneSupport/UnityEditor.OSXStandalone.Extensions.dll</HintPath>
- </Reference>
- <Reference Include="UnityEngine.Advertisements.Editor">
- <HintPath>/Volumes/Noodlevault/noodleadstest/Assets/UnityAds/UnityEngine.Advertisements.Editor.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.Advertisements">
  <HintPath>/Users/ben/Library/Unity/cache/packages/packages.unity.com/com.unity.ads@2.0.8/Editor/UnityEditor.Advertisements.dll</HintPath>
