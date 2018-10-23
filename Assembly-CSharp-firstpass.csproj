@@ -61,6 +61,11 @@
      <Compile Include="Assets\Plugins\Heyzap\HZOfferWallAd.cs" />
      <Compile Include="Assets\Plugins\Heyzap\HZShowOptions.cs" />
      <Compile Include="Assets\Plugins\Heyzap\HZVideoAd.cs" />
+     <None Include="Assets\Plugins\iOS\MOAT_LICENSE.txt" />
+     <None Include="Assets\Plugins\Android\ChartboostSDK\AndroidManifest.xml" />
+     <None Include="Assets\Plugins\iOS\MOAT_VERSION.txt" />
+     <None Include="Assets\Plugins\iOS\VERSION_MOAT.txt" />
+     <None Include="Assets\Plugins\iOS\LICENSE_MOAT.txt" />
      <None Include="Assets\Plugins\Android\AndroidManifest.xml" />
      <None Include="Assets\Plugins\Android\GoogleMobileAdsPlugin\AndroidManifest.xml" />
      <None Include="Assets\Plugins\AppLovin\AppLovin Readme.txt" />
