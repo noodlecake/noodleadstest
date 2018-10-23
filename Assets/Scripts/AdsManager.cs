@@ -12,13 +12,14 @@ public class AdsManager : MonoBehaviour {
 
 		HeyzapAds.ShowDebugLogs();
 		HeyzapAds.ShowThirdPartyDebugLogs();
-		
-		HeyzapAds.ShowMediationTestSuite();
-
 	}
 	
 	// Update is called once per frame
 	void Update () {
 		
+	}
+
+	public void OpenTestSuite() {
+		HeyzapAds.ShowMediationTestSuite();
 	}
 }
