@@ -19,7 +19,7 @@
 <activity android:name='com.ironsource.sdk.controller.InterstitialActivity' android:configChanges='orientation|screenSize' android:hardwareAccelerated='true' android:theme='@android:style/Theme.Translucent' />
 <activity android:name='com.ironsource.sdk.controller.OpenUrlActivity' android:configChanges='orientation|screenSize' android:hardwareAccelerated='true' android:theme='@android:style/Theme.Translucent' />
 <meta-data android:name="com.google.android.gms.ads.AD_MANAGER_APP" android:value="true"/>
-<meta-data android:name="com.google.android.gms.ads.APPLICATION_ID" android:value="ca-app-pub-8614616160528432~4479888726"/>
+<meta-data android:name="com.google.android.gms.ads.APPLICATION_ID" android:value="ca-app-pub-8614616160528432~2589605449"/>
 
     <meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version" />
   </application>

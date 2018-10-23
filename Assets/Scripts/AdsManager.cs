@@ -10,6 +10,9 @@ public class AdsManager : MonoBehaviour {
         // Your Publisher ID is: 7e4482c1be37901e95ec6b42c8e14e21
         HeyzapAds.Start("7e4482c1be37901e95ec6b42c8e14e21", HeyzapAds.FLAG_NO_OPTIONS);
 
+		HeyzapAds.ShowDebugLogs();
+		HeyzapAds.ShowThirdPartyDebugLogs();
+		
 		HeyzapAds.ShowMediationTestSuite();
 
 	}
