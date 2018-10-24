@@ -91,6 +91,17 @@
      <Compile Include="Assets\GoogleMobileAds\Platforms\iOS\MonoPInvokeCallbackAttribute.cs" />
      <Compile Include="Assets\GoogleMobileAds\Platforms\iOS\RewardBasedVideoAdClient.cs" />
      <Compile Include="Assets\GoogleMobileAds\Platforms\iOS\Utils.cs" />
+     <Compile Include="Assets\IronSource\Scripts\AndroidAgent.cs" />
+     <Compile Include="Assets\IronSource\Scripts\iOSAgent.cs" />
+     <Compile Include="Assets\IronSource\Scripts\IronSource.cs" />
+     <Compile Include="Assets\IronSource\Scripts\IronSourceConfig.cs" />
+     <Compile Include="Assets\IronSource\Scripts\IronSourceError.cs" />
+     <Compile Include="Assets\IronSource\Scripts\IronSourceEvents.cs" />
+     <Compile Include="Assets\IronSource\Scripts\IronSourceIAgent.cs" />
+     <Compile Include="Assets\IronSource\Scripts\IronSourceJSON.cs" />
+     <Compile Include="Assets\IronSource\Scripts\IronSourcePlacement.cs" />
+     <Compile Include="Assets\IronSource\Scripts\IronSourceSegment.cs" />
+     <Compile Include="Assets\IronSource\Scripts\UnsupportedPlatformAgent.cs" />
      <Compile Include="Assets\Scripts\AdsManager.cs" />
  <Reference Include="UnityEngine.CoreModule">
  <HintPath>/Applications/Unity2017.4.13f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.CoreModule.dll</HintPath>

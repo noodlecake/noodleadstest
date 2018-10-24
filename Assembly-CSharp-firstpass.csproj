@@ -65,6 +65,7 @@
      <None Include="Assets\Plugins\Android\ChartboostSDK\AndroidManifest.xml" />
      <None Include="Assets\Plugins\iOS\MOAT_VERSION.txt" />
      <None Include="Assets\Plugins\iOS\VERSION_MOAT.txt" />
+     <None Include="Assets\Plugins\Android\IronSource\AndroidManifest.xml" />
      <None Include="Assets\Plugins\iOS\LICENSE_MOAT.txt" />
      <None Include="Assets\Plugins\Android\AndroidManifest.xml" />
      <None Include="Assets\Plugins\Android\GoogleMobileAdsPlugin\AndroidManifest.xml" />
