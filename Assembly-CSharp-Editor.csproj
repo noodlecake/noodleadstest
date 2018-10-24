@@ -52,6 +52,8 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Editor\Heyzap\HeyzapPostBuild.cs" />
+     <Compile Include="Assets\Editor\Vungle\VunglePostBuilder.cs" />
+     <Compile Include="Assets\Editor\VungleBuildHelper.cs" />
      <Compile Include="Assets\IronSource\Editor\IAdapterSettings.cs" />
      <Compile Include="Assets\IronSource\Editor\IronSourceBuildPostprocessor.cs" />
      <None Include="Assets\PlayServicesResolver\Editor\play-services-resolver.txt" />
