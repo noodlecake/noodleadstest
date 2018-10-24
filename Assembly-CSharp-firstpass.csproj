@@ -71,7 +71,6 @@
      <None Include="Assets\Plugins\Android\GoogleMobileAdsPlugin\AndroidManifest.xml" />
      <None Include="Assets\Plugins\AppLovin\AppLovin Readme.txt" />
      <None Include="Assets\Plugins\Android\Heyzap\AndroidManifest.xml" />
-     <None Include="Assets\Plugins\Android\Vungle_lib\AndroidManifest.xml" />
  <Reference Include="UnityEngine.CoreModule">
  <HintPath>/Applications/Unity2017.4.13f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.CoreModule.dll</HintPath>
  </Reference>
