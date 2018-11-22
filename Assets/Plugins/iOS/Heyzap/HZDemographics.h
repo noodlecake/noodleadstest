@@ -63,7 +63,7 @@ typedef NS_ENUM(NSUInteger, HZUserEducation) {
  *
  *  Some networks will only use the age / birth year / age range of the user, and some will use the full birthdate, so you can set this as accurately as possible and we'll give what we can to each network that asks for it. For instance, if you only know that a user is 25, you can set the birthdate to 25 years from today and that will be sufficient.
  *
- *  Networks who use this information: AdColony, AdMob, AppLovin, Fyber, Heyzap Exchange, InMobi, Leadbolt
+ *  Networks who use this information: AdColony, AdMob, AppLovin, Fyber, Heyzap Exchange, InMobi
  */
 @property (nonatomic, strong, nullable) NSDate *userBirthDate;
 
@@ -81,7 +81,7 @@ typedef NS_ENUM(NSUInteger, HZUserEducation) {
 /*
  *  The user's gender.
  *
- *  Networks who use this information: AdColony, AdMob, AppLovin, Fyber, Heyzap Exchange, InMobi, Leadbolt
+ *  Networks who use this information: AdColony, AdMob, AppLovin, Fyber, Heyzap Exchange, InMobi
  */
 @property (nonatomic) HZUserGender userGender;
 
