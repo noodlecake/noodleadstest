@@ -35,7 +35,7 @@ namespace AudienceNetwork.Editor
         public const string AudienceNetworkPath = "Assets/AudienceNetwork/";
         public const string AudienceNetworkPluginsPath = AudienceNetworkPath + "Plugins/";
         public const string AudienceNetworkPluginiOSPath = AudienceNetworkPluginsPath + "iOS/libs/FBAudienceNetwork.framework/FBAudienceNetwork";
-        public const string AudienceNetworkPluginAndroidPath = AudienceNetworkPluginsPath + "Android/libs/ads-release.aar";
+        public const string AudienceNetworkPluginAndroidPath = AudienceNetworkPluginsPath + "Android/libs/AudienceNetwork.aar";
         public static string PluginsPath = "Assets/Plugins/";
 
         public enum Target {

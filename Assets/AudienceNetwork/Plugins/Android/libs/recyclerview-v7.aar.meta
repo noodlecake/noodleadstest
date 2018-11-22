@@ -1,27 +1,27 @@
-fileFormatVersion: &513606310 2
+fileFormatVersion: &882857194 2
 guid: bc4c80c41446c4ceba269436073ae745
 timeCreated: 1531986671
 licenseType: Pro
 PluginImporter:
-  externalObjects: &1129123839 {}
+  externalObjects: &397149565 {}
   serializedVersion: 2
   iconMap: {}
   executionOrder: {}
-  isPreloaded: &1462075216 0
+  isPreloaded: &447836623 0
   isOverridable: 0
   platformData:
-  - &1739165990 first:
-      &1908190643 Android: Android
-    &886805157 second:
-      &1127047780 enabled: 1
-      &1279625029 settings: {}
+  - &631577798 first:
+      &1171437555 Android: Android
+    &115360119 second:
+      &1169925782 enabled: 1
+      &442950630 settings: {}
   - first:
-      Any: &1613556241 ''
+      Any: &373593658 ''
     second:
       enabled: 0
       settings: {}
   - first:
-      &796887749 Editor: Editor
+      &531680106 Editor: Editor
     second:
       enabled: 0
       settings:

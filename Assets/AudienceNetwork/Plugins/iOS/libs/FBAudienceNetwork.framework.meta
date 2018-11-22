@@ -12,7 +12,7 @@ PluginImporter:
   - first:
       Any: 
     second:
-      enabled: 0
+      enabled: 1
       settings: {}
   - first:
       Editor: Editor
@@ -20,12 +20,6 @@ PluginImporter:
       enabled: 0
       settings:
         DefaultValueInitialized: true
-  - first:
-      iPhone: iOS
-    second:
-      enabled: 1
-      settings:
-        FrameworkDependencies: AdSupport;StoreKit;
   userData: 
   assetBundleName: 
   assetBundleVariant: 

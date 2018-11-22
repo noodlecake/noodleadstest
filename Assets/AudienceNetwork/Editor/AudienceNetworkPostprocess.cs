@@ -31,7 +31,7 @@ namespace AudienceNetwork.Editor
     public static class XCodePostProcess
     {
         public static string AudienceNetworkFramework = "FBAudienceNetwork.framework";
-        public static string AudienceNetworkAAR = "ads-release.aar";
+        public static string AudienceNetworkAAR = "AudienceNetwork.aar";
         public static string FrameworkDependenciesKey = "FrameworkDependencies";
         public static string RequiredFrameworks = "AdSupport;StoreKit;";
 
