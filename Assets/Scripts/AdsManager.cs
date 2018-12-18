@@ -73,6 +73,8 @@ public class AdsManager : MonoBehaviour {
 	public void ShowVideo() {
 		if (IronSource.Agent.isInterstitialReady()) {
 			IronSource.Agent.showInterstitial();
+		} else {
+			IronSource.Agent.loadInterstitial();
 		}
 	}
 
@@ -153,6 +155,7 @@ public class AdsManager : MonoBehaviour {
 	}
 	//Invoked when the interstitial ad closed and the user goes back to the application screen.
 	void InterstitialAdClosedEvent () {
+		IronSource.Agent.loadInterstitial();
 	}
 	//Invoked when the Interstitial is Ready to shown after load function is called
 	void InterstitialAdReadyEvent() {
