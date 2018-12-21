@@ -1,16 +1,18 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.UI;
 
 public class AdsManager : MonoBehaviour {
+
+	public Text videoText;
+	bool videoAdAvailable;
 
 #if UNITY_IOS
 	const string IRONSOURCE_KEY = "7e2f58f5";
 #elif UNITY_ANDROID
 	const string IRONSOURCE_KEY = "7e2f927d";
 #endif
-
 
 	bool bannerShowing;
 
@@ -52,9 +54,9 @@ public class AdsManager : MonoBehaviour {
 
 		IronSource.Agent.shouldTrackNetworkState (true);
 
-		IronSource.Agent.loadInterstitial();
-
 		bannerShowing = false;
+		videoAdAvailable = false;
+		videoText.text = "Fetch Video";
 	}
 	
 	// Update is called once per frame
@@ -73,6 +75,8 @@ public class AdsManager : MonoBehaviour {
 	public void ShowVideo() {
 		if (IronSource.Agent.isInterstitialReady()) {
 			IronSource.Agent.showInterstitial();
+			videoAdAvailable = false;
+			videoText.text = "Fetch Video";
 		} else {
 			IronSource.Agent.loadInterstitial();
 		}
@@ -155,10 +159,10 @@ public class AdsManager : MonoBehaviour {
 	}
 	//Invoked when the interstitial ad closed and the user goes back to the application screen.
 	void InterstitialAdClosedEvent () {
-		IronSource.Agent.loadInterstitial();
 	}
 	//Invoked when the Interstitial is Ready to shown after load function is called
 	void InterstitialAdReadyEvent() {
+		videoText.text = "Show Video";
 	}
 	//Invoked when the Interstitial Ad Unit has opened
 	void InterstitialAdOpenedEvent() {
