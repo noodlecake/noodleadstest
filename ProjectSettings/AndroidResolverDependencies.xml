@@ -1,12 +1,24 @@
 <dependencies>
   <packages>
-    <package>com.google.android.gms:play-services-ads:15.0.1</package>
+    <package>com.yumimobi.ads.mediation:admob:3.4.+</package>
+    <package>com.yumimobi.ads.mediation:applovin:3.4.+</package>
+    <package>com.yumimobi.ads.mediation:chartboost:3.4.+</package>
+    <package>com.yumimobi.ads.mediation:facebook:3.4.+</package>
+    <package>com.yumimobi.ads.mediation:ironsource:3.4.+</package>
+    <package>com.yumimobi.ads.mediation:mintegral:3.4.+</package>
+    <package>com.yumimobi.ads.mediation:mraid:3.4.+</package>
+    <package>com.yumimobi.ads.mediation:playableads:3.4.+</package>
+    <package>com.yumimobi.ads.mediation:unity:3.4.+</package>
+    <package>com.yumimobi.ads.mediation:vungle:3.4.+</package>
+    <package>com.yumimobi.ads:mediation:3.4.+</package>
   </packages>
   <files>
     <file>Assets/Plugins/Android/android.arch.core.common-1.0.0.jar</file>
     <file>Assets/Plugins/Android/android.arch.lifecycle.common-1.0.0.jar</file>
     <file>Assets/Plugins/Android/android.arch.lifecycle.runtime-1.0.0.aar</file>
-    <file>Assets/Plugins/Android/com.android.support.customtabs-26.1.0.aar</file>
+    <file>Assets/Plugins/Android/com.android.support.animated-vector-drawable-26.1.0.aar</file>
+    <file>Assets/Plugins/Android/com.android.support.appcompat-v7-26.1.0.aar</file>
+    <file>Assets/Plugins/Android/com.android.support.recyclerview-v7-26.1.0.aar</file>
     <file>Assets/Plugins/Android/com.android.support.support-annotations-26.1.0.jar</file>
     <file>Assets/Plugins/Android/com.android.support.support-compat-26.1.0.aar</file>
     <file>Assets/Plugins/Android/com.android.support.support-core-ui-26.1.0.aar</file>
@@ -14,11 +26,39 @@
     <file>Assets/Plugins/Android/com.android.support.support-fragment-26.1.0.aar</file>
     <file>Assets/Plugins/Android/com.android.support.support-media-compat-26.1.0.aar</file>
     <file>Assets/Plugins/Android/com.android.support.support-v4-26.1.0.aar</file>
-    <file>Assets/Plugins/Android/com.google.android.gms.play-services-ads-15.0.1.aar</file>
-    <file>Assets/Plugins/Android/com.google.android.gms.play-services-ads-base-15.0.1.aar</file>
-    <file>Assets/Plugins/Android/com.google.android.gms.play-services-ads-identifier-15.0.1.aar</file>
-    <file>Assets/Plugins/Android/com.google.android.gms.play-services-ads-lite-15.0.1.aar</file>
-    <file>Assets/Plugins/Android/com.google.android.gms.play-services-basement-15.0.1.aar</file>
-    <file>Assets/Plugins/Android/com.google.android.gms.play-services-gass-15.0.1.aar</file>
+    <file>Assets/Plugins/Android/com.android.support.support-vector-drawable-26.1.0.aar</file>
+    <file>Assets/Plugins/Android/com.facebook.android.audience-network-sdk-4.99.3.aar</file>
+    <file>Assets/Plugins/Android/com.google.android.exoplayer.exoplayer-core-r2.4.2.aar</file>
+    <file>Assets/Plugins/Android/com.google.android.exoplayer.exoplayer-dash-r2.4.2.aar</file>
+    <file>Assets/Plugins/Android/com.google.android.gms.play-services-ads-10.0.1.aar</file>
+    <file>Assets/Plugins/Android/com.google.android.gms.play-services-ads-lite-10.0.1.aar</file>
+    <file>Assets/Plugins/Android/com.google.android.gms.play-services-base-10.0.1.aar</file>
+    <file>Assets/Plugins/Android/com.google.android.gms.play-services-basement-10.0.1.aar</file>
+    <file>Assets/Plugins/Android/com.google.android.gms.play-services-clearcut-10.0.1.aar</file>
+    <file>Assets/Plugins/Android/com.google.android.gms.play-services-gass-10.0.1.aar</file>
+    <file>Assets/Plugins/Android/com.google.android.gms.play-services-tasks-10.0.1.aar</file>
+    <file>Assets/Plugins/Android/com.google.firebase.firebase-ads-10.0.1.aar</file>
+    <file>Assets/Plugins/Android/com.google.firebase.firebase-analytics-10.0.1.aar</file>
+    <file>Assets/Plugins/Android/com.google.firebase.firebase-analytics-impl-10.0.1.aar</file>
+    <file>Assets/Plugins/Android/com.google.firebase.firebase-common-10.0.1.aar</file>
+    <file>Assets/Plugins/Android/com.google.firebase.firebase-iid-10.0.1.aar</file>
+    <file>Assets/Plugins/Android/com.playableads.playableads-2.3.0.aar</file>
+    <file>Assets/Plugins/Android/com.yumimobi.ads.mediation.admob-3.4.0.aar</file>
+    <file>Assets/Plugins/Android/com.yumimobi.ads.mediation.applovin-3.4.0.aar</file>
+    <file>Assets/Plugins/Android/com.yumimobi.ads.mediation.chartboost-3.4.0.aar</file>
+    <file>Assets/Plugins/Android/com.yumimobi.ads.mediation.facebook-3.4.0.aar</file>
+    <file>Assets/Plugins/Android/com.yumimobi.ads.mediation.ironsource-3.4.0.aar</file>
+    <file>Assets/Plugins/Android/com.yumimobi.ads.mediation.mintegral-3.4.0.aar</file>
+    <file>Assets/Plugins/Android/com.yumimobi.ads.mediation.mraid-3.4.0.aar</file>
+    <file>Assets/Plugins/Android/com.yumimobi.ads.mediation.playableads-3.4.0.aar</file>
+    <file>Assets/Plugins/Android/com.yumimobi.ads.mediation.unity-3.4.0.aar</file>
+    <file>Assets/Plugins/Android/com.yumimobi.ads.mediation.vungle-3.4.0.aar</file>
+    <file>Assets/Plugins/Android/com.yumimobi.ads.mediation-3.4.0.aar</file>
+    <file>Assets/Plugins/Android/com.yumimobi.ads.thirdparty.applovin-8.0.2.0.aar</file>
+    <file>Assets/Plugins/Android/com.yumimobi.ads.thirdparty.chartboost-6.6.3.1.aar</file>
+    <file>Assets/Plugins/Android/com.yumimobi.ads.thirdparty.ironsource-6.7.10.0.aar</file>
+    <file>Assets/Plugins/Android/com.yumimobi.ads.thirdparty.mobvista-8.13.0.0.aar</file>
+    <file>Assets/Plugins/Android/com.yumimobi.ads.thirdparty.unity-2.3.0.0.aar</file>
+    <file>Assets/Plugins/Android/com.yumimobi.ads.thirdparty.vungle-6.3.17.0.aar</file>
   </files>
 </dependencies>
