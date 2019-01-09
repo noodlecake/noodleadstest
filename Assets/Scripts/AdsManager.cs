@@ -15,6 +15,7 @@ public class AdsManager : MonoBehaviour {
 	string gameVersion;
 	bool bannerShowing;
 	bool bannerLoaded;
+	bool waitingForInterstitial;
 
 #if UNITY_IOS
 	private const string CHANNEL_ID = "iOS";
@@ -47,6 +48,7 @@ public class AdsManager : MonoBehaviour {
 	void Start () {
 		bannerShowing = false;
 		bannerLoaded = false;
+		waitingForInterstitial = false;
 		gameVersion = Application.version;
 
 		//Init banner
@@ -80,6 +82,8 @@ public class AdsManager : MonoBehaviour {
     	this.interstitialAd.OnAdFailedToLoad += HandleInterstitialAdFailedToLoad;
     	this.interstitialAd.OnAdClicked += HandleInterstitialAdClicked;
     	this.interstitialAd.OnAdClosed += HandleInterstitialAdClosed;
+
+		waitingForInterstitial = true;
 	}
 
 	public void ShowRewarded() {
@@ -102,59 +106,64 @@ public class AdsManager : MonoBehaviour {
 			this.bannerView.Show();
 		} else {
 			this.bannerView.Hide();
+			bannerShowing = false;
 		}
 	}
 
 	//CALLBACKS
 	public void HandleBannerLoaded( object sender, EventArgs args )
 	{
-		Logger.Log( "HandleBannerLoaded event received" );
+		Debug.Log("[NCTEST] HandleBannerLoaded event received" );
 		this.bannerView.Show();
+		bannerShowing = true;
 	}
 
 	public void HandleBannerFailedToLoad( object sender, YumiAdFailedToLoadEventArgs args )
 	{
-		Logger.Log( "HandleBannerFailedToLoad event received with message: " + args.Message );
+		Debug.Log("[NCTEST] HandleBannerFailedToLoad event received with message: " + args.Message );
 	}
 
 	public void HandleBannerClicked( object sender, EventArgs args )
 	{
-		Logger.Log( "Handle Banner Clicked" );
+		Debug.Log("[NCTEST] Handle Banner Clicked" );
 	}
 
 	public void HandleInterstitialAdLoaded(object sender, EventArgs args) 
 	{
-		Logger.Log("HandleInterstitialAdLoaded event received");
-		this.interstitialAd.ShowInterstitial();
+		Debug.Log("[NCTEST] HandleInterstitialAdLoaded event received");
+		if (waitingForInterstitial) {
+			this.interstitialAd.ShowInterstitial();
+			waitingForInterstitial = false;
+		}
 	}
 	public void HandleInterstitialAdFailedToLoad(object sender, YumiAdFailedToLoadEventArgs args) 
 	{
-		Logger.Log("HandleInterstitialAdFailedToLoad event received with message: " + args.Message);
+		Debug.Log("[NCTEST] HandleInterstitialAdFailedToLoad event received with message: " + args.Message);
 	}
 	public void HandleInterstitialAdClicked(object sender, EventArgs args) 
 	{
-		Logger.Log("HandleInterstitialAdClicked Clicked");
+		Debug.Log("[NCTEST] HandleInterstitialAdClicked Clicked");
 	}
 	public void HandleInterstitialAdClosed(object sender, EventArgs args) 
 	{
-		Logger.Log("HandleInterstitialAdClosed Ad closed");
+		Debug.Log("[NCTEST] HandleInterstitialAdClosed Ad closed");
 	}
 
 	  public void HandleRewardVideoAdOpened(object sender, EventArgs args) 
 	{
-		Logger.Log("HandleRewardVideoAdOpened event opened");
+		Debug.Log("[NCTEST] HandleRewardVideoAdOpened event opened");
 	}
 	public void HandleRewardVideoAdStartPlaying(object sender, EventArgs args) 
 	{
-		Logger.Log("HandleRewardVideoAdStartPlaying event start playing ");
+		Debug.Log("[NCTEST] HandleRewardVideoAdStartPlaying event start playing ");
 	}
 	public void HandleRewardVideoAdReward(object sender, EventArgs args) 
 	{
-		Logger.Log("HandleRewardVideoAdReward reward");
+		Debug.Log("[NCTEST] HandleRewardVideoAdReward reward");
 	}
 	public void HandleRewardVideoAdClosed(object sender, EventArgs args) 
 	{
-		Logger.Log("HandleRewardVideoAdClosed Ad closed");
+		Debug.Log("[NCTEST] HandleRewardVideoAdClosed Ad closed");
 		this.rewardedAd.DestroyRewardVideo();
 	}
 
