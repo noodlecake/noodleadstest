@@ -15,7 +15,6 @@ public class AdsManager : MonoBehaviour {
 	string gameVersion;
 	bool bannerShowing;
 	bool bannerLoaded;
-	bool waitingForInterstitial;
 
 #if UNITY_IOS
 	private const string CHANNEL_ID = "iOS";
@@ -48,7 +47,6 @@ public class AdsManager : MonoBehaviour {
 	void Start () {
 		bannerShowing = false;
 		bannerLoaded = false;
-		waitingForInterstitial = false;
 		gameVersion = Application.version;
 
 		//Init banner
@@ -57,6 +55,12 @@ public class AdsManager : MonoBehaviour {
 		this.bannerView.OnAdLoaded += this.HandleBannerLoaded;
 		this.bannerView.OnAdFailedToLoad += this.HandleBannerFailedToLoad;
 		this.bannerView.OnAdClick += this.HandleBannerClicked;
+
+
+		//Request first ads
+		this.bannerView.LoadAd(true);
+		RequestInterstitial();
+		RequestRewarded();
 	}
 	
 	// Update is called once per frame
@@ -72,9 +76,12 @@ public class AdsManager : MonoBehaviour {
         this.debugCenter.PresentYumiMediationDebugCenter(BANNER_ID, INTERSTITIAL_ID, REWARDED_ID, CHANNEL_ID, gameVersion);
 	}
 
-	public void ShowVideo() {
+	public void RequestInterstitial() {
+		Debug.Log("[NCTEST] REQUESTING INTERSTITIAL AD");
+
 		if (this.interstitialAd != null) {
 			this.interstitialAd.DestroyInterstitial();
+			this.interstitialAd = null;
 		}
 
 		this.interstitialAd = new YumiInterstitialAd(INTERSTITIAL_ID, CHANNEL_ID, gameVersion);
@@ -82,13 +89,21 @@ public class AdsManager : MonoBehaviour {
     	this.interstitialAd.OnAdFailedToLoad += HandleInterstitialAdFailedToLoad;
     	this.interstitialAd.OnAdClicked += HandleInterstitialAdClicked;
     	this.interstitialAd.OnAdClosed += HandleInterstitialAdClosed;
-
-		waitingForInterstitial = true;
 	}
 
-	public void ShowRewarded() {
-		if (this.rewardedAd != null && this.rewardedAd.IsRewardVideoReady()) {
-			this.rewardedAd.PlayRewardVideo();
+	public void ShowVideo() {
+		if (this.interstitialAd != null && this.interstitialAd.IsInterstitialReady()) {
+			this.interstitialAd.ShowInterstitial();
+		} else {
+			Debug.Log("[NCTEST] NO INTERSTITIAL AD AVAILABLE - REQUESTING NEW");
+			RequestInterstitial();
+		}
+	}
+
+	public void RequestRewarded() {
+		Debug.Log("[NCTEST] REQUESTING REWARDED AD");
+		if (this.rewardedAd != null) {
+			this.rewardedAd.DestroyRewardVideo();
 		}
 
 		this.rewardedAd = new YumiRewardVideoAd();
@@ -99,11 +114,21 @@ public class AdsManager : MonoBehaviour {
 		this.rewardedAd.LoadRewardVideoAd(REWARDED_ID, CHANNEL_ID, gameVersion);
 	}
 
+	public void ShowRewarded() {
+		if (this.rewardedAd != null && this.rewardedAd.IsRewardVideoReady()) {
+			this.rewardedAd.PlayRewardVideo();
+		} else {
+			Debug.Log("[NCTEST] NO REWARDED AD AVAILABLE - REQUESTING NEW");
+			RequestRewarded();
+		}
+	}
+
 	public void ToggleBanner() {
 		if (!bannerShowing && !bannerLoaded) {
 			this.bannerView.LoadAd(true);
 		} else if (!bannerShowing) {
 			this.bannerView.Show();
+			bannerShowing = true;
 		} else {
 			this.bannerView.Hide();
 			bannerShowing = false;
@@ -114,8 +139,7 @@ public class AdsManager : MonoBehaviour {
 	public void HandleBannerLoaded( object sender, EventArgs args )
 	{
 		Debug.Log("[NCTEST] HandleBannerLoaded event received" );
-		this.bannerView.Show();
-		bannerShowing = true;
+		bannerLoaded = true;
 	}
 
 	public void HandleBannerFailedToLoad( object sender, YumiAdFailedToLoadEventArgs args )
@@ -131,10 +155,6 @@ public class AdsManager : MonoBehaviour {
 	public void HandleInterstitialAdLoaded(object sender, EventArgs args) 
 	{
 		Debug.Log("[NCTEST] HandleInterstitialAdLoaded event received");
-		if (waitingForInterstitial) {
-			this.interstitialAd.ShowInterstitial();
-			waitingForInterstitial = false;
-		}
 	}
 	public void HandleInterstitialAdFailedToLoad(object sender, YumiAdFailedToLoadEventArgs args) 
 	{
@@ -149,7 +169,7 @@ public class AdsManager : MonoBehaviour {
 		Debug.Log("[NCTEST] HandleInterstitialAdClosed Ad closed");
 	}
 
-	  public void HandleRewardVideoAdOpened(object sender, EventArgs args) 
+	public void HandleRewardVideoAdOpened(object sender, EventArgs args) 
 	{
 		Debug.Log("[NCTEST] HandleRewardVideoAdOpened event opened");
 	}
@@ -164,7 +184,6 @@ public class AdsManager : MonoBehaviour {
 	public void HandleRewardVideoAdClosed(object sender, EventArgs args) 
 	{
 		Debug.Log("[NCTEST] HandleRewardVideoAdClosed Ad closed");
-		this.rewardedAd.DestroyRewardVideo();
 	}
 
 }
