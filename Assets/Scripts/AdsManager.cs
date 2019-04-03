@@ -30,6 +30,7 @@ public class AdsManager : MonoBehaviour {
 	private const string BANNER_ID = "l6ibkpae";
 	private const string INTERSTITIAL_ID = "onkkeg5i";
 	private const string REWARDED_ID = "5xmpgti4";
+	private const string NATIVE_ID = "atb3ke1i";
 
 	private const string SPLASH_ID = "trlkbkn1";
 #elif UNITY_ANDROID
@@ -46,6 +47,7 @@ public class AdsManager : MonoBehaviour {
 	private const string BANNER_ID = "uz852t89";
 	private const string INTERSTITIAL_ID = "56ubk22h";
 	private const string REWARDED_ID = "ew9hyvl4";
+	private const string NATIVE_ID = "dt62rndy";
 
 	private const string SPLASH_ID = "btrda6bv";
 #else
@@ -55,6 +57,7 @@ public class AdsManager : MonoBehaviour {
 	private const string BANNER_ID = "error";
 	private const string INTERSTITIAL_ID = "error";
 	private const string REWARDED_ID = "error";
+	private const string NATIVE_ID = "error";
 	private const string SPLASH_ID = "error";
 #endif
 
@@ -66,7 +69,9 @@ public class AdsManager : MonoBehaviour {
 		gameVersion = Application.version;
 
 		//Init banner
-		this.bannerView = new YumiBannerView(BANNER_ID, CHANNEL_ID, gameVersion, YumiAdPosition.Bottom);
+		YumiBannerViewOptions bannerOptions = new YumiBannerViewOptionsBuilder().Build();
+		bannerOptions.adPosition = YumiAdPosition.TOP;
+		this.bannerView = new YumiBannerView(BANNER_ID, CHANNEL_ID, gameVersion, bannerOptions);
 
 		this.bannerView.OnAdLoaded += this.HandleBannerLoaded;
 		this.bannerView.OnAdFailedToLoad += this.HandleBannerFailedToLoad;
@@ -74,7 +79,7 @@ public class AdsManager : MonoBehaviour {
 
 
 		//Request first ads
-		this.bannerView.LoadAd(true);
+		this.bannerView.LoadAd();
 		RequestInterstitial();
 		RequestRewarded();
 	}
@@ -89,14 +94,14 @@ public class AdsManager : MonoBehaviour {
             this.debugCenter = new YumiDebugCenter();
         }
 
-        this.debugCenter.PresentYumiMediationDebugCenter(BANNER_ID, INTERSTITIAL_ID, REWARDED_ID, CHANNEL_ID, gameVersion);
+        this.debugCenter.PresentYumiMediationDebugCenter(BANNER_ID, INTERSTITIAL_ID, REWARDED_ID, NATIVE_ID, CHANNEL_ID, gameVersion);
 	}
 
 	public void RequestInterstitial() {
 		Debug.Log("[NCTEST] REQUESTING INTERSTITIAL AD");
 
 		if (this.interstitialAd != null) {
-			this.interstitialAd.DestroyInterstitial();
+			this.interstitialAd.Destroy();
 			this.interstitialAd = null;
 		}
 
@@ -108,8 +113,8 @@ public class AdsManager : MonoBehaviour {
 	}
 
 	public void ShowVideo() {
-		if (this.interstitialAd != null && this.interstitialAd.IsInterstitialReady()) {
-			this.interstitialAd.ShowInterstitial();
+		if (this.interstitialAd != null && this.interstitialAd.IsReady()) {
+			this.interstitialAd.Show();
 		} else {
 			Debug.Log("[NCTEST] NO INTERSTITIAL AD AVAILABLE - REQUESTING NEW");
 			RequestInterstitial();
@@ -118,21 +123,18 @@ public class AdsManager : MonoBehaviour {
 
 	public void RequestRewarded() {
 		Debug.Log("[NCTEST] REQUESTING REWARDED AD");
-		if (this.rewardedAd != null) {
-			this.rewardedAd.DestroyRewardVideo();
-		}
 
-		this.rewardedAd = new YumiRewardVideoAd();
+		this.rewardedAd = YumiRewardVideoAd.Instance;
 		this.rewardedAd.OnAdOpening += HandleRewardVideoAdOpened;
 		this.rewardedAd.OnAdStartPlaying += HandleRewardVideoAdStartPlaying;
 		this.rewardedAd.OnAdRewarded += HandleRewardVideoAdReward;
 		this.rewardedAd.OnAdClosed += HandleRewardVideoAdClosed;
-		this.rewardedAd.LoadRewardVideoAd(REWARDED_ID, CHANNEL_ID, gameVersion);
+		this.rewardedAd.LoadAd(REWARDED_ID, CHANNEL_ID, gameVersion);
 	}
 
 	public void ShowRewarded() {
-		if (this.rewardedAd != null && this.rewardedAd.IsRewardVideoReady()) {
-			this.rewardedAd.PlayRewardVideo();
+		if (this.rewardedAd != null && this.rewardedAd.IsReady()) {
+			this.rewardedAd.Play();
 		} else {
 			Debug.Log("[NCTEST] NO REWARDED AD AVAILABLE - REQUESTING NEW");
 			RequestRewarded();
@@ -141,7 +143,7 @@ public class AdsManager : MonoBehaviour {
 
 	public void ToggleBanner() {
 		if (!bannerShowing && !bannerLoaded) {
-			this.bannerView.LoadAd(true);
+			this.bannerView.LoadAd();
 		} else if (!bannerShowing) {
 			this.bannerView.Show();
 			bannerShowing = true;
