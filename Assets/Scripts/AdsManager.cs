@@ -22,14 +22,14 @@ public class AdsManager : MonoBehaviour {
 	private const string APP_ID = "khpunuj9";
 
 	//Noodlecake Placements
-	// private const string BANNER_ID = "cveiflo7";
-	// private const string INTERSTITIAL_ID = "eksi16dm";
-	// private const string REWARDED_ID = "ajo0ji3j";
+	private const string BANNER_ID = "cveiflo7";
+	private const string INTERSTITIAL_ID = "eksi16dm";
+	private const string REWARDED_ID = "ajo0ji3j";
 
 	//YUMI Test Placements
-	private const string BANNER_ID = "l6ibkpae";
-	private const string INTERSTITIAL_ID = "onkkeg5i";
-	private const string REWARDED_ID = "5xmpgti4";
+	// private const string BANNER_ID = "l6ibkpae";
+	// private const string INTERSTITIAL_ID = "onkkeg5i";
+	// private const string REWARDED_ID = "5xmpgti4";
 	private const string NATIVE_ID = "atb3ke1i";
 
 	private const string SPLASH_ID = "trlkbkn1";
@@ -39,14 +39,14 @@ public class AdsManager : MonoBehaviour {
 	private const string APP_ID = "8rpuontc";
 
 	//Noodlecake Placements
-	// private const string BANNER_ID = "n44uwwn7";
-	// private const string INTERSTITIAL_ID = "1kx5ljxb";
-	// private const string REWARDED_ID = "fstbpmm8";
+	private const string BANNER_ID = "n44uwwn7";
+	private const string INTERSTITIAL_ID = "1kx5ljxb";
+	private const string REWARDED_ID = "fstbpmm8";
 
 	//YUMI Test Placements
-	private const string BANNER_ID = "uz852t89";
-	private const string INTERSTITIAL_ID = "56ubk22h";
-	private const string REWARDED_ID = "ew9hyvl4";
+	// private const string BANNER_ID = "uz852t89";
+	// private const string INTERSTITIAL_ID = "56ubk22h";
+	// private const string REWARDED_ID = "ew9hyvl4";
 	private const string NATIVE_ID = "dt62rndy";
 
 	private const string SPLASH_ID = "btrda6bv";
